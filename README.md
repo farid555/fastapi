@@ -24,15 +24,15 @@ pip install "fastapi[all]"
 ### http://127.0.0.1:8000/docs fastapi documentation
 ### http://127.0.0.1:8000/rdoc fastapi documentation
 
-Linux Postgresql
-ls /etc/postgresql/14/main/
-service postgres
-sudo su postgres
-psql
-see current database-\du
-change password psql- ALTER USER postgres WITH PASSWORD '123456';
-                    - CREATE USER fastApi WITH PASSWORD '123456';
-Add superuser       - ALTER USER fastapi WITH SUPERUSER;
-Delete user         - DROP USER fastapi
+## Linux Postgresql
+- [x] ls /etc/postgresql/14/main/
+- [x] service postgres
+- [x] sudo su postgres
+- [x] run- psql
+- [x] see current database-\du
+- [x] Change password psql - ALTER USER postgres WITH PASSWORD '123456';
+- [x] Create new user      - CREATE USER fastApi WITH PASSWORD '123456';
+- [x] Add superuser        - ALTER USER fastapi WITH SUPERUSER;
+- [x] Delete user          - DROP USER fastapi
 
 
