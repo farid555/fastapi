@@ -17,13 +17,16 @@ class Post(BaseModel):
 
 
 my_posts = [{"title": "title for post 1", "content": "this from content 1", "id": 1},
-            {"title": "title for post 2", "content": "this from content 2", "id": 2}]  # Array of dict
+            {"title": "title for post 2", "content": "this from content 2", "id": 2},
+            {"title": "title for post 3", "content": "this from content 2", "id": 3},
+            {"title": "title for post 4", "content": "this from content 2", "id": 4}]  # Array of dict
 
 
 def find_Post(id):
     for p in my_posts:
+        print(f"p-{p}")
         if p['id'] == id:
-            print(p)
+            print(id)
             return p
 
 
