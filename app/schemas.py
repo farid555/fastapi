@@ -13,11 +13,8 @@ class PostCreate(PostBase):
 
 
 class PostRespons(PostBase):
-    # id: int
-    title: str
-    content: str
-    published: bool = True
-    # created_at: datetime
+    id: int
+    created_at: datetime
 
     class Config:    # make sure it's right indent
         orm_mode = True
