@@ -32,3 +32,10 @@ class UserInfo(BaseModel):
 
     class Config:    # make sure it's right indent
         orm_mode = True
+        
+        
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
+

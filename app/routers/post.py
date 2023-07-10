@@ -6,7 +6,8 @@ from fastapi import Response, status, HTTPException, Depends, APIRouter
 
 
 router = APIRouter(
-    prefix="/posts"
+    prefix="/posts",
+    tags=['Posts']
 )
 
 
