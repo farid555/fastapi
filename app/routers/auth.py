@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, status, HTTPException
 from sqlalchemy.orm import Session
-from ..import database, schemas, models, utils
+from ..import database, schemas, models, utils, oauth2
 
 
 router = APIRouter(tags=['Authentication'])
@@ -23,5 +23,6 @@ def login(user_credentials: schemas.UserLogin, db: Session = Depends(database.ge
 
 # create a token
 # return token
+    access_token = oauth2.create_access_token(data={"user_id": user.id})
 
-    return {"token": "example token"}
+    return {"access_token": access_token, "token_type": "bearer"}
